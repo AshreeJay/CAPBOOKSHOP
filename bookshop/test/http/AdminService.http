@@ -1,0 +1,129 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Authors
+# @name Authors_GET
+GET {{server}}/admin/Authors
+Authorization: Basic {{username}}:{{password}}
+
+
+### Authors
+# @name Authors_POST
+POST {{server}}/admin/Authors
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 9575174,
+  "name": "name-9575174",
+  "createdAt": "2010-09-15T18:30:00.000Z",
+  "createdBy": "createdBy.5p892@example.com",
+  "modifiedAt": "2018-08-20T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.5p892@example.net"
+}
+
+
+### Authors
+# @name Authors_PATCH
+PATCH {{server}}/admin/Authors/9575174
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 9575174,
+  "name": "name-9575174",
+  "createdAt": "2010-09-15T18:30:00.000Z",
+  "createdBy": "createdBy.5p892@example.com",
+  "modifiedAt": "2018-08-20T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.5p892@example.net"
+}
+
+
+### Authors
+# @name Authors_DELETE
+DELETE {{server}}/admin/Authors/9575174
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_GET
+GET {{server}}/admin/Books
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_POST
+POST {{server}}/admin/Books
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 12716356,
+  "title": "title-12716356",
+  "descr": "descr-12716356",
+  "author": {
+    "ID": 9575174
+  },
+  "genre": {
+    "ID": 28349116
+  },
+  "stock": 93,
+  "price": 55.19,
+  "currency": {
+    "code": "628"
+  },
+  "createdAt": "2007-05-24T18:30:00.000Z",
+  "createdBy": "createdBy.7kk04@example.com",
+  "modifiedAt": "2003-01-11T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.7kk04@example.net"
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/admin/Books/12716356
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 12716356,
+  "title": "title-12716356",
+  "descr": "descr-12716356",
+  "author": {
+    "ID": 9575174
+  },
+  "genre": {
+    "ID": 28349116
+  },
+  "stock": 93,
+  "price": 55.19,
+  "currency": {
+    "code": "628"
+  },
+  "createdAt": "2007-05-24T18:30:00.000Z",
+  "createdBy": "createdBy.7kk04@example.com",
+  "modifiedAt": "2003-01-11T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.7kk04@example.net"
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/admin/Books/12716356
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Genres
+# @name Genres_GET
+GET {{server}}/admin/Genres
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/admin/Currencies
+Authorization: Basic {{username}}:{{password}}
