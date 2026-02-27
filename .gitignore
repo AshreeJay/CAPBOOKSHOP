@@ -1,0 +1,7 @@
+*/node_modules/*
+*/.vscode/*
+*/db.sqlite*/
+bookshop/db.sqlite
+bookshop/db.sqlite-shm
+bookshop/db.sqlite-wal
+*/gen/*
